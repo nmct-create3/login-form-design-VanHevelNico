@@ -7,7 +7,9 @@
 \*------------------------------------*/
 
 :root {
-
+    --global-color-alpha-light: #4F95FF;
+    --global-color-alpha: #3385FF;
+    --global-color-alpha-dark: #2E77E6;
 }
 
 /* CSS variables here */
@@ -175,12 +177,12 @@ a {
 
 a:visited,
 a:active {
-    color: #2a6ed3;
+    color: var(--global-color-alpha);
 }
 
 a:hover,
 a:focus {
-    color: #6933ff;
+    color: var(--global-color-alpha-light);
 }
 
 label {
@@ -208,7 +210,10 @@ input {
 }
 
 .o-row--login {
-    /* stuff here to align the card */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* size modifiers */
@@ -520,7 +525,15 @@ input {
 */
 
 .c-label {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    color: #606274;
+}
 
+.c-label--option {
+    margin-left: 8px;
+    margin-bottom: 0;
 }
 
 .c-form-field--inline {
@@ -586,10 +599,19 @@ input {
     text-align: center;
     font-size: 18px;
     line-height: 21px;
+    padding-top: 48px;
+    margin: 0;
 }
  
 .c-card__footer {
-    /* todo */
+    border-top: solid #E2E3E7 1px;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.c-card__footer p {
+    margin: 0;
 }
 /*------------------------------------*\
 #UTILITIES
